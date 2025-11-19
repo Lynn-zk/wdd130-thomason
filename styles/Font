@@ -1,0 +1,5 @@
+Heading Font
+@import url('https://fonts.googleapis.com/css2?family=Allan:wght@400;700&display=swap');
+Paragraph Font
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
