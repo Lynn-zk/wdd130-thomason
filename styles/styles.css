@@ -1,1 +1,334 @@
+:root {
+    --dark-teal: #2F4F4F;     
+    --rust-brown: #8B4513;    
+    --off-white: #F5F5DC;     
+    --slate-gray: #708090;    
+}
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arimo', Arial, sans-serif;
+    color: var(--slate-gray);
+    background-color: var(--off-white);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+
+h1, h2, h3 {
+    font-family: 'Allan', Georgia, serif;
+    color: var(--dark-teal);
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(47, 79, 79, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav > div {
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    display: block;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-teal);
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--rust-brown);
+    color: white;
+}
+
+
+section:first-of-type {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(47, 79, 79, 0.8), rgba(47, 79, 79, 0.9)), 
+                url('../images/cool_mountain.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+section:first-of-type h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+section:first-of-type p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--off-white);
+}
+
+section:first-of-type > div {
+    margin: 2rem auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+section:first-of-type img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+section:first-of-type a {
+    display: inline-block;
+    background-color: var(--rust-brown);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--rust-brown);
+}
+
+section:first-of-type a:hover {
+    background-color: transparent;
+    color: var(--rust-brown);
+    transform: translateY(-2px);
+}
+
+
+#categories {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+#categories h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+#categories h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: var(--rust-brown);
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+#categories > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 3rem;
+    gap: 2rem;
+}
+
+#categories > div > div {
+    flex: 1; 
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+}
+
+
+#categories > div > div:first-child {
+    border: 2px solid var(--dark-teal);
+}
+
+
+#categories > div > div:last-child {
+    border: 2px solid var(--rust-brown);
+}
+
+#categories > div > div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(139, 69, 19, 0.15);
+}
+
+#categories h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--dark-teal);
+}
+
+#categories > div > div:last-child h3 {
+    color: var(--rust-brown);
+}
+
+#categories p {
+    color: var(--slate-gray);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    flex-grow: 1;
+}
+
+#categories a {
+    display: inline-block;
+    background-color: var(--dark-teal);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid var(--dark-teal);
+    align-self: center;
+}
+
+#categories > div > div:last-child a {
+    background-color: var(--rust-brown);
+    border-color: var(--rust-brown);
+}
+
+#categories a:hover {
+    background-color: transparent;
+    color: var(--dark-teal);
+}
+
+#categories > div > div:last-child a:hover {
+    color: var(--rust-brown);
+}
+
+
+footer {
+    background-color: var(--dark-teal);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+footer p {
+    font-family: 'Arimo', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: var(--off-white);
+}
+
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+
+    section:first-of-type {
+        padding: 3rem 1rem;
+    }
+    
+    section:first-of-type h1 {
+        font-size: 2.2rem;
+    }
+    
+    section:first-of-type p {
+        font-size: 1.1rem;
+    }
+    
+
+    #categories {
+        padding: 2rem 1rem;
+    }
+    
+    #categories h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    #categories > div {
+        flex-direction: column; 
+        gap: 1.5rem;
+    }
+    
+    #categories > div > div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    section:first-of-type h1 {
+        font-size: 1.8rem;
+    }
+    
+    section:first-of-type p {
+        font-size: 1rem;
+    }
+    
+    nav ul li a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    #categories > div > div {
+        padding: 1.5rem 1rem;
+    }
+    
+    #categories h3 {
+        font-size: 1.5rem;
+    }
+}
